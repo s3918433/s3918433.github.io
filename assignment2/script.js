@@ -172,3 +172,5 @@ document.addEventListener("fullscreenchange", function () {
     console.log("Exited fullscreen");
   }
 });
+
+// Scrolling script

@@ -60,9 +60,15 @@
         input field -->
         <!-- ---------------------------------------------------------------- -->
         <section class="notes">
-          <div>
-            <h1>To do List</h1>
-            <input type="text" placeholder="Add a new To-Do" />
+          <h1>To do List</h1>
+          <div class="input">
+            <input
+              type="text"
+              class="input-field"
+              id="todoInput"
+              placeholder="Add a new todo"
+            />
+            <button class="button">Add</button>
           </div>
           <ul class="scroll">
             <li id="todoList"></li>
@@ -74,7 +80,6 @@
               <button id="deleteButton">Delete All</button>
             </div>
           </div>
-          <button class="button">Add</button>
         </section>
       </section>
     </main>
