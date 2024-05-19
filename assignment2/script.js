@@ -173,4 +173,7 @@ document.addEventListener("fullscreenchange", function () {
   }
 });
 
-// Scrolling script
+// Creating a storage for to-do list - so when we clear the page it will saved our to-do list
+
+let todo = JSON.parse(localStorage.getItem("todo")); //(JSON) Java Script Object Notation; a way to format Javascript code that is easily to read
+//JSON is a string and .parse() is an object; the code turns the string to an object; object is gonna go in {} form and has alot of data inside it
