@@ -13,24 +13,24 @@ const playPauseImg = document.querySelector("#play-pause-img");
 
 const muteUnmuteButton = document.querySelector("#mute-unmute-btn");
 // Event listener to mute or unmute audio on clicking the button
-muteUnmuteButton.addEventListener("click", toggleAudio);
-const muteUnmuteImg = document.querySelector("#mute-unmute-img");
+// muteUnmuteButton.addEventListener("click", toggleAudio);
+// const muteUnmuteImg = document.querySelector("#mute-unmute-img");
 
 const increaseVolumeButton = document.querySelector("#increase-volume-btn");
-// Event listener to increase volume on clicking the button
-increaseVolumeButton.addEventListener("click", increaseVolume);
+// // Event listener to increase volume on clicking the button
+// increaseVolumeButton.addEventListener("click", increaseVolume);
 
-const decreaseVolumeButton = document.querySelector("#decrease-volume-btn");
-// Event listener to decrease volume on clicking the button
-decreaseVolumeButton.addEventListener("click", decreaseVolume);
+// const decreaseVolumeButton = document.querySelector("#decrease-volume-btn");
+// // Event listener to decrease volume on clicking the button
+// decreaseVolumeButton.addEventListener("click", decreaseVolume);
 
-const loopButton = document.querySelector("#loop-btn");
-// Event listener to loop or replay the video on clicking the button
-loopButton.addEventListener("click", loopVideo);
+// const loopButton = document.querySelector("#loop-btn");
+// // Event listener to loop or replay the video on clicking the button
+// loopButton.addEventListener("click", loopVideo);
 
-const step1Button = document.querySelector("#step-1-btn");
-// Event listener to navigate to step 1 timestamp in video on clicking the button
-step1Button.addEventListener("click", gotoStep1);
+// const step1Button = document.querySelector("#step-1-btn");
+// // Event listener to navigate to step 1 timestamp in video on clicking the button
+// step1Button.addEventListener("click", gotoStep1);
 
 const myVideo = document.querySelector("#my-video");
 const videoName = document.querySelector("#video-name");
@@ -38,22 +38,22 @@ const videoTime = document.querySelector("#video-time");
 const progressBar = document.querySelector("#progress-bar-fill");
 // myVideo.removeAttribute("controls");
 
-// Event listener to check time update on video to update the progress bar
-myVideo.addEventListener("timeupdate", updateProgressBar);
+// // Event listener to check time update on video to update the progress bar
+// myVideo.addEventListener("timeupdate", updateProgressBar);
 
-// Event listener to check current volume
-myVideo.addEventListener("volumechange", updateVolume);
+// // Event listener to check current volume
+// myVideo.addEventListener("volumechange", updateVolume);
 
-// Event listener to check if the video is ended to replay it
-myVideo.addEventListener("ended", replay);
+// // Event listener to check if the video is ended to replay it
+// myVideo.addEventListener("ended", replay);
 
 const firstVideoButton = document.querySelector("#first-video-btn");
 
-// Event listener to play the first video
-firstVideoButton.addEventListener("click", function playIt() {
-  myVideo.pause();
-  playVideo(0);
-});
+// // Event listener to play the first video
+// firstVideoButton.addEventListener("click", function playIt() {
+//   myVideo.pause();
+//   playVideo(0);
+// });
 
 function updateVolume() {
   const volume = myVideo.volume;
@@ -79,11 +79,11 @@ function gotoStep1() {
   myVideo.currentTime = 16.41;
 }
 
-const secondVideoButton = document.querySelector("#second-video-btn");
-secondVideoButton.addEventListener("click", function playIt() {
-  myVideo.pause();
-  playVideo(1);
-});
+// const secondVideoButton = document.querySelector("#second-video-btn");
+// secondVideoButton.addEventListener("click", function playIt() {
+//   myVideo.pause();
+//   playVideo(1);
+// });
 
 //video will be played if it is currently paused or ended
 //otherwise the same function will pause the video
@@ -161,19 +161,25 @@ function toggleFullscreen() {
   }
 }
 
-// Event listener for double-click on the video to toggle fullscreen
-myVideo.addEventListener("dblclick", toggleFullscreen);
+// // Event listener for double-click on the video to toggle fullscreen
+// myVideo.addEventListener("dblclick", toggleFullscreen);
 
-// Event listener for fullscreen change event to update UI
-document.addEventListener("fullscreenchange", function () {
-  if (document.fullscreenElement === myVideo) {
-    console.log("Entered fullscreen");
-  } else {
-    console.log("Exited fullscreen");
-  }
-});
+// // Event listener for fullscreen change event to update UI
+// document.addEventListener("fullscreenchange", function () {
+//   if (document.fullscreenElement === myVideo) {
+//     console.log("Entered fullscreen");
+//   } else {
+//     console.log("Exited fullscreen");
+//   }
+// });
 
 // Creating a storage for to-do list - so when we clear the page it will saved our to-do list
 
-let todo = JSON.parse(localStorage.getItem("todo")); //(JSON) Java Script Object Notation; a way to format Javascript code that is easily to read
+let todo = JSON.parse(localStorage.getItem("todo")) || [];
+//(JSON) Java Script Object Notation; a way to format Javascript code that is easily to read
 //JSON is a string and .parse() is an object; the code turns the string to an object; object is gonna go in {} form and has alot of data inside it
+//Letting Javascript know that if the users has used the website before it will show up the past to-do list; hence why use getItem("todo"). If user has not used this website yet it will show a empty to-do list.
+
+const todoInput = document.getElementById("todoInput");
+
+console.log(todoInput);
