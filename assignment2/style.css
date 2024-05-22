@@ -98,6 +98,7 @@ button {
   border-radius: 40px;
 }
 
+/* styling the checked box */
 ul li {
   list-style: none;
   font-size: 17px;
@@ -143,8 +144,9 @@ ul li span {
   text-align: center;
 }
 
+/* styling for the delete icon when the mouse hover it */
 ul li span:hover {
-  backrgound: ;
+  background: #edeef0 ;
 }
 
 .media-player {

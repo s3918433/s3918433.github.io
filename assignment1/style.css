@@ -28,7 +28,7 @@ body {
 
 /* adds space on the top of the container separating them*/
 .container + .container {
-  margin-top: 0.9rem;
+  /* margin-top: 0.9rem; */
 }
 
 /* changes the sizes of the boxes according to the child elements */
