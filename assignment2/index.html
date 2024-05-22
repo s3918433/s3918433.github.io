@@ -72,20 +72,30 @@
   <!-- </body> -->
 
   <body>
-    <div class="grid">
-      <div class="container">
-        <div class="Video Player">
-          <video id="custom-video-player" controls>
-            <source
-              src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
-              type="video/mp4"
-            />
-          </video>
+    <!-- Header Section -->
+    <header>
+      <h1>Media Player Website</h1>
+    </header>
+    <div class="container">
+      <div class="media-player">
+        <video id="custom-video-player" controls>
+          <source
+            src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <div class="To-do">
+        <h2>To-Do List</h2>
+        <div class="row">
+          <input type="text" id="input-box" placeholder="Add your text" />
+          <button onclick="addTask()">Add</button>
         </div>
-        <div class="Todo">
-          <h2>hello</h2>
-          <p>test</p>
-        </div>
+        <ul id="list-container">
+          <!-- <li class="checked">Task 1</li>
+          <li>Task 2</li>
+          <li>Task 3</li> -->
+        </ul>
       </div>
     </div>
   </body>

@@ -38,36 +38,120 @@ body {
   break-inside: avoid;
 } */
 
-.grid {
-  /* columns: 2rem; */
-  border: #333 dashed 10px;
-  gap: 1rem;
-  margin: 1rem;
-}
-
 /*repeat notation: having the value repeated*/
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
-  flex-shrink: 0;
-  break-inside: avoid;
+  width: 100%;
+  min-height: 80vh; /*vh stands for viewport height, viewable screen's height. If i said 100%vh, it would represent the whole website screen*/
+  padding: 10px;
+  background: pink;
+  border: blue 3px dashed;
+}
+
+.To-do {
+  background-color: bisque;
+  border-radius: 10px;
+  flex: 1;
+  padding: 10px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
   margin: 10px;
 }
 
-.inner {
+.To-do h2 {
+  color: #002765;
   display: flex;
-  justify-content: center;
-  gap: 0.7rem;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.Todo {
-  background-color: bisque;
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef6;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
 }
 
-.VideoPlayer {
-  width: 300px;
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #ff5945;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+/* come back in the video for this one and dont forget to credit him */
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+}
+
+/* styling for the task when it is checked */
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+/* styling for the task before it was checked */
+ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+
+/* styling for the delete icon */
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+}
+
+ul li span:hover {
+  backrgound: ;
+}
+
+.media-player {
+  flex: 3;
+  margin-bottom: 10px;
+  width: 100px;
+  height: auto;
 }
 
 /* .VideoPlayer{
