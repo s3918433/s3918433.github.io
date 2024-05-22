@@ -28,11 +28,57 @@ body {
 /* Add additional styles as needed */
 
 /* Create a container for the main content */
-.container {
-  max-width: 1000px;
-  width: 100%;
+
+/* .container {
+  display: flex;
+  gap: 0.5rem;
   padding: 10px;
+  background-color: #333;
+  justify-content: center;
+  break-inside: avoid;
+} */
+
+.grid {
+  /* columns: 2rem; */
+  border: #333 dashed 10px;
+  gap: 1rem;
+  margin: 1rem;
 }
+
+/*repeat notation: having the value repeated*/
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-shrink: 0;
+  break-inside: avoid;
+  margin: 10px;
+}
+
+.inner {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+.Todo {
+  background-color: bisque;
+}
+
+.VideoPlayer {
+  width: 300px;
+}
+
+/* .VideoPlayer{
+  max-width: 100%;
+}
+
+.Todo {
+  background-color: aqua;
+  width: 1000px;
+  padding: 10px;
+} */
 
 /* Header styling */
 header {
