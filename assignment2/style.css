@@ -146,25 +146,14 @@ ul li span {
 
 /* styling for the delete icon when the mouse hover it */
 ul li span:hover {
-  background: #edeef0 ;
+  background: #edeef0;
 }
 
-.media-player {
+media-player {
   flex: 3;
   margin-bottom: 10px;
-  width: 100px;
-  height: auto;
+  width: 10000px;
 }
-
-/* .VideoPlayer{
-  max-width: 100%;
-}
-
-.Todo {
-  background-color: aqua;
-  width: 1000px;
-  padding: 10px;
-} */
 
 /* Header styling */
 header {
