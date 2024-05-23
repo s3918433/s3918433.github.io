@@ -26,8 +26,6 @@ body {
     var(--lightblue),
     var(--grey)
   );
-
-  color: var(--text-color);
   line-height: 1.6;
   display: flex;
   flex-direction: column;
@@ -54,12 +52,13 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
+  background-color: #ff5945;
 }
 
 .video-container {
   width: 900px;
   height: 0;
-  padding-bottom: 56.26%; /*the aspect ratio of 16:9*/
+  padding-bottom: 0; /*the aspect ratio of 16:9*/
   position: relative;
 }
 

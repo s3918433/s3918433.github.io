@@ -39,7 +39,7 @@ updateTime();
 setInterval(updateTime, 1000);
 
 //script for Todo List
-//Credits goes to https://youtu.be/G0jO8kUrg-I?si=oJ6MNVo3wtEtT8Nq
+//Credits goes to: https://youtu.be/G0jO8kUrg-I?si=OIs44rVNl0v3g89h
 //--------------------------------------------------------
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");

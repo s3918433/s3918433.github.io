@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Live Stream Layout</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background: radial-gradient(circle, #ff00ff, #00ffff);
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        color: white;
+        font-size: 40px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <div class="video-player">
-        <video controls>
-          <source src="your-video-source.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="chat-box">
-        <h2>Live Chat</h2>
-        <div class="chat-messages">
-          <p>User1: Hello!</p>
-          <p>User2: Hi there!</p>
-          <!-- More chat messages -->
-        </div>
-        <input type="text" placeholder="Type your message..." />
-      </div>
-    </div>
+    <h1>Circle Gradient Background</h1>
   </body>
 </html>
