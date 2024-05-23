@@ -74,10 +74,12 @@
   <body>
     <!-- Header Section -->
     <header>
-      <h1>Media Player Website</h1>
+      <!-- <h1>Media Player Website</h1> -->
+      <h1>Current time:</h1>
+      <p id="time"></p>
     </header>
     <div class="container">
-      <div class="media-player">
+      <div class="video-container">
         <video id="custom-video-player" controls>
           <source
             src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
@@ -85,15 +87,15 @@
           />
         </video>
       </div>
-    </div>
-    <div class="container">
-      <div class="To-do">
-        <h2>To-Do List</h2>
-        <div class="row">
-          <input type="text" id="input-box" placeholder="Add your text" />
-          <button onclick="addTask()">Add</button>
+      <div class="to-do-container">
+        <div class="To-do">
+          <h2>To-Do List</h2>
+          <div class="row">
+            <input type="text" id="input-box" placeholder="Add your text" />
+            <button onclick="addTask()">Add</button>
+          </div>
+          <ul id="list-container"></ul>
         </div>
-        <ul id="list-container"></ul>
       </div>
     </div>
   </body>

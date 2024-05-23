@@ -1,25 +1,46 @@
-const video = document.querySelector("#custom-video-player");
-const playPauseBtn = document.querySelector("#play-pause-btn");
-const playPauseImg = document.querySelector("#play-pause-img");
-const progressBar = document.querySelector("#progress-bar-fill");
-video.removeAttribute("controls");
-// playPauseBtn.addEventListener("click", togglePlayPause);
-video.addEventListener("timeupdate", updateProgressBar);
-function togglePlayPause() {
-  if (video.paused || video.ended) {
-    video.play();
-    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v1.png";
-  } else {
-    video.pause();
-    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/play--v1.png";
-  }
-}
-function updateProgressBar() {
-  const value = (video.currentTime / video.duration) * 100;
-  progressBar.style.width = value + "%";
-}
+// const video = document.querySelector("#custom-video-player");
+// const playPauseBtn = document.querySelector("#play-pause-btn");
+// const playPauseImg = document.querySelector("#play-pause-img");
+// const progressBar = document.querySelector("#progress-bar-fill");
+// video.removeAttribute("controls");
+// // playPauseBtn.addEventListener("click", togglePlayPause);
+// video.addEventListener("timeupdate", updateProgressBar);
+// function togglePlayPause() {
+//   if (video.paused || video.ended) {
+//     video.play();
+//     playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v1.png";
+//   } else {
+//     video.pause();
+//     playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/play--v1.png";
+//   }
+// }
+// function updateProgressBar() {
+//   const value = (video.currentTime / video.duration) * 100;
+//   progressBar.style.width = value + "%";
+// }
+
 // Add other functionalities here
 
+//script for current time in the header
+// Credits goes to SheCodes; AI coding assistant
+//https://www.shecodes.io/athena#question-428657
+//--------------------------------------------------------
+function updateTime() {
+  //input the current time
+  var dateTime = new Date();
+  //extracting the time from the date object
+  var currentTime = dateTime.toLocaleTimeString();
+  //display the current time inside the <p> element with the id "time"
+  document.getElementById("time").innerHTML = currentTime;
+}
+//wanted to update the live time immediately
+updateTime();
+//website updates every 1000 millisecond
+setInterval(updateTime, 1000);
+
+//script for Todo List
+//Credits goes to https://youtu.be/G0jO8kUrg-I?si=oJ6MNVo3wtEtT8Nq
+//--------------------------------------------------------
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
@@ -65,4 +86,4 @@ function saveData() {
 function showTask() {
   listContainer.innerHTML = localStorage.getItem("data");
 }
-showTask(); 
+showTask();
