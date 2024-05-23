@@ -26,11 +26,14 @@ body {
     var(--lightblue),
     var(--grey)
   );
+
+  color: var(--text-color);
   line-height: 1.6;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: start;
 }
 
 /* Add additional styles as needed */
@@ -52,13 +55,13 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: #ff5945;
+  margin-top: 10px;
 }
 
 .video-container {
   width: 900px;
   height: 0;
-  padding-bottom: 0; /*the aspect ratio of 16:9*/
+  padding-bottom: 56.26%; /*the aspect ratio of 16:9*/
   position: relative;
 }
 
@@ -72,6 +75,8 @@ body {
 
 .to-do-container {
   width: 30%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .to-do {
@@ -79,10 +84,12 @@ body {
   border-radius: 10px;
   flex: 1;
   padding: 10px;
-  max-height: 400px;
+  min-width: 350px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   margin: 10px;
+  margin-top: 0px;
 }
 
 .to-do h2 {
@@ -102,11 +109,12 @@ body {
   margin-bottom: 25px;
 }
 
-.input {
+.to-do input {
   flex: 1;
   border: none;
   outline: none;
   background: transparent;
+  color: var(--text-color);
   padding: 10px;
 }
 
@@ -140,7 +148,8 @@ ul li::before {
   background-image: url(images/unchecked.png);
   background-size: cover;
   background-position: center;
-  top: 12px;
+  top: 11px;
+  left: 15px;
 }
 
 /* styling for the task when it is checked */
@@ -216,10 +225,14 @@ nav a {
   .to-do-container {
     width: 100%;
     margin-top: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
   }
 
   .to-do {
-    height: 150px;
+    /* height: 150px; */
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
