@@ -84,20 +84,20 @@ function togglePlayPause() {
 
 //script for mute button
 const muteUnmuteButton = document.querySelector("#mute-unmute-btn");
-const muteUnmuteImg = document.querySelector("#mute-unmute-img");
-muteUnmuteButton.addEventListener("click", toggleMuteUnmute);
+// const muteUnmuteImg = document.querySelector("#mute-unmute-img");
+// muteUnmuteButton.addEventListener("click", toggleMuteUnmute);
 
 function toggleMuteUnmute() {
   if (video.muted) {
     video.muted = false;
-    muteUnmuteImg.src =
-      "https://img.icons8.com/ios-glyphs/30/high-volume--v2.png";
+    muteUnmuteImg.src = "images/no-audio.png";
   } else {
     video.muted = true;
-    muteUnmuteImg.src = "https://img.icons8.com/ios-glyphs/30/no-audio--v1.png";
+    muteUnmuteImg.src = "images/audio.png";
   }
 }
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  log.textContent += "DOMContentLoaded\n";
+document.addEventListener("DOMContentLoaded", () => {
+  const muteUnmuteImg = document.querySelector("#mute-unmute-img");
+  muteUnmuteImg.addEventListener("click", toggleMuteUnmute());
 });
