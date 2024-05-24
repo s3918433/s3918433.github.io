@@ -97,9 +97,9 @@ platPauseBtn.addEventListener("click", togglePlayPause);
 function togglePlayPause() {
   if (video.paused || video.ended) {
     video.play();
-    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/play--v2.png";
+    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v2.png";
   } else {
     video.pause();
-    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v2.png";
+    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/play--v2.png";
   }
 }

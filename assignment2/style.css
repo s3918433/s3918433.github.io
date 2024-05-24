@@ -1,3 +1,5 @@
+/* incorperated the colour pallete the same as the video! to make it look aesthetically pleasing */
+
 :root {
   --yellow: #f2eeac;
   --orange: #ff8c38;
@@ -17,7 +19,7 @@ ul {
 }
 
 header {
-  background: #002765;
+  padding: 10px;
 }
 
 body {
@@ -31,12 +33,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  /* justify-content: end; */
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
+
+/* The layout was inspired by a live-stream layout from twitch and youtube, replacing the chatbox as a to-do lis. I wanted to make it as simple as possible to create a clean feel for the users. */
 
 /* Create a container for the main content */
 .container {
@@ -55,8 +59,6 @@ body {
   padding: 10px;
 }
 
-#video {
-}
 
 #video-element {
   position: absolute;
@@ -64,7 +66,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-
   border: #edeef0 20px solid;
 }
 
@@ -73,10 +74,11 @@ body {
   width: 30%;
   padding-left: 15px;
   padding-right: 15px;
+
 }
 
 .to-do {
-  border: #260101 4px solid;
+  border: #260101 2px solid;
   border-radius: 10px;
   flex: 1;
   padding: 10px;
@@ -104,6 +106,7 @@ body {
   border-radius: 30px;
   padding-left: 20px;
   margin-bottom: 25px;
+  
 }
 
 .to-do input {
@@ -113,6 +116,7 @@ body {
   background: transparent;
   color: var(--darkbrown);
   padding: 10px;
+  
 }
 
 button {
@@ -126,7 +130,7 @@ button {
   border-radius: 40px;
 }
 
-.play-pause-name-container {
+.control-container {
   display: flex;
   margin-top: 10px;
   justify-content: space-between;
@@ -142,7 +146,7 @@ button {
 .title {
   display: flex;
   align-items: center;
-  color: #769aa3;
+  color: #260101;
   background: #edeef0;
   padding: 10px;
 }
@@ -172,7 +176,7 @@ ul li::before {
 
 /* styling for the task when it is checked */
 ul li.checked {
-  color: #555;
+  color: #260101;
   text-decoration: line-through;
 }
 
@@ -189,47 +193,19 @@ ul li span {
   width: 40px;
   height: 40px;
   font-size: 22px;
-  color: #555;
+  color: #260101;
   line-height: 40px;
   text-align: center;
 }
 
 /* styling for the delete icon when the mouse hover it */
 ul li span:hover {
-  background: #edeef0;
-}
-
-/* Header styling */
-header {
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
-  padding: 10px 0;
-  text-align: center;
-  width: 100%;
-}
-
-/* Navigation styling */
-nav {
-  margin-top: 20px;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin-right: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--text-color);
+  background: var(--orange);
+  border-radius: 10px;
 }
 
 /* Media query for smaller screens */
+/* the styling format when the screen is shrunk! */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -252,4 +228,12 @@ nav a {
     margin-left: 0px;
     margin-right: 0px;
   }
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
 }

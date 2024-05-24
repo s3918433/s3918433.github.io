@@ -91,10 +91,10 @@ function toggleMuteUnmute() {
   if (video.muted) {
     video.muted = false;
     muteUnmuteImg.src =
-      "https://img.icons8.com/ios-glyphs/30/high-volume--v2.png";
+      "https://icons8.com/icon/reqgj3e1uKBy/audio";
   } else {
     video.muted = true;
-    muteUnmuteImg.src = "https://img.icons8.com/ios-glyphs/30/no-audio--v1.png";
+    muteUnmuteImg.src = "https://icons8.com/icon/91635/no-audio";
   }
 }
 
