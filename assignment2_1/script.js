@@ -1,5 +1,29 @@
+// const video = document.querySelector("#custom-video-player");
+// const playPauseBtn = document.querySelector("#play-pause-btn");
+// const playPauseImg = document.querySelector("#play-pause-img");
+// const progressBar = document.querySelector("#progress-bar-fill");
+// video.removeAttribute("controls");
+// // playPauseBtn.addEventListener("click", togglePlayPause);
+// video.addEventListener("timeupdate", updateProgressBar);
+// function togglePlayPause() {
+//   if (video.paused || video.ended) {
+//     video.play();
+//     playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v1.png";
+//   } else {
+//     video.pause();
+//     playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/play--v1.png";
+//   }
+// }
+// function updateProgressBar() {
+//   const value = (video.currentTime / video.duration) * 100;
+//   progressBar.style.width = value + "%";
+// }
+
+// Add other functionalities here
+
 //script for current time in the header
-// Credits goes to SheCodes; AI coding assistant: https://www.shecodes.io/athena#question-428657
+// Credits goes to SheCodes; AI coding assistant
+//https://www.shecodes.io/athena#question-428657
 //--------------------------------------------------------
 function updateTime() {
   //input the current time
@@ -14,14 +38,14 @@ updateTime();
 //website updates every 1000 millisecond
 setInterval(updateTime, 1000);
 
-//script for a working video
-const video = document.querySelector("#custom-video-player");
-
 //script for Todo List
 //Credits goes to: https://youtu.be/G0jO8kUrg-I?si=OIs44rVNl0v3g89h
 //--------------------------------------------------------
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
+const video = document.querySelector("#custom-video-player");
+const playPauseBtn = document.querySelector("#play-pause-btn");
+const playPauseImg = document.querySelector("#play-pause-img");
 
 function addTask() {
   if (inputBox.value === "") {
@@ -68,36 +92,14 @@ function showTask() {
 showTask();
 
 //script for pause and play button
-const playPauseBtn = document.querySelector("#play-pause-btn");
-const playPauseImg = document.querySelector("#play-pause-img");
 platPauseBtn.addEventListener("click", togglePlayPause);
 
 function togglePlayPause() {
   if (video.paused || video.ended) {
     video.play();
-    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v2.png";
+    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/play--v2.png";
   } else {
     video.pause();
-    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/play--v2.png";
+    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v2.png";
   }
 }
-
-//script for mute button
-const muteUnmuteButton = document.querySelector("#mute-unmute-btn");
-const muteUnmuteImg = document.querySelector("#mute-unmute-img");
-muteUnmuteButton.addEventListener("click", toggleMuteUnmute);
-
-function toggleMuteUnmute() {
-  if (video.muted) {
-    video.muted = false;
-    muteUnmuteImg.src =
-      "https://img.icons8.com/ios-glyphs/30/high-volume--v2.png";
-  } else {
-    video.muted = true;
-    muteUnmuteImg.src = "https://img.icons8.com/ios-glyphs/30/no-audio--v1.png";
-  }
-}
-
-document.addEventListener("DOMContentLoaded", (event) => {
-  log.textContent += "DOMContentLoaded\n";
-});

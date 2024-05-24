@@ -1,89 +1,65 @@
+<!-- In this assignment i have decided to create a study website where users could use the website and enjoy lofi music while having personal to-do list on the right hand. they are able to control the video aswell by muting and pausing the video. -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- add the font family of your choice -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Space+Grotesk&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-  <!-- <body> -->
-  <!-- Header Section -->
-  <!-- <header>
-      <h1>Media Player Website</h1>
-    </header> -->
-
-  <!-- Navigation Section -->
-  <!-- <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Music</a></li>
-        <li><a href="#">Playlists</a></li> -->
-  <!-- Add or remove navigation items as needed -->
-  <!-- </ul>
-    </nav> -->
-
-  <!-- Main Content Section -->
-  <!-- <main class="container"> -->
-  <!-- Media Player Section -->
-  <!-- <div class="media-player">
-        <video id="custom-video-player" controls>
-          <source
-            src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div class="custom-controls">
-          <button id="play-pause-btn" onclick="togglePlayPause()">
-            <img
-              id="play-pause-img"
-              src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
-              alt="Play Button"
-              width="24"
-              height="24"
-            />
-          </button> -->
-  <!-- add the missing buttons or functionality here -->
-  <!-- <div class="progress-bar">
-            <span id="progress-bar-fill"></span>
-          </div>
-        </div>
-      </div> -->
-
-  <!-- Additional Content Section -->
-  <!-- <section class="To-do">
-        <h2>Notes</h2>
-        <p>notes where i put my task</p> -->
-  <!-- Add more content as needed -->
-  <!-- </section>
-    </main> -->
-
-  <!-- Footer Section -->
-  <!-- <footer>
-      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
-      <a href="https://icons8.com/icon/59862/play">Play</a> icon by
-      <a href="https://icons8.com">Icons8</a>
-      <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
-      <a href="https://icons8.com">Icons8</a>
-    </footer> -->
-  <!-- </body> -->
-
   <body>
     <!-- Header Section -->
+    <!-- Decided to make a current time for users to know what time is it when studying :) -->
     <header>
-      <!-- <h1>Media Player Website</h1> -->
       <h1>Current time: <span id="time"></span></h1>
     </header>
+
+    <!-- container for video and to-do-list -->
     <div class="container">
       <div class="video-container">
-        <video id="custom-video-player" controls>
-          <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4" />
-        </video>
+        <span id="video">
+          <video id="custom-video-player" controls autoplay>
+            <source src="video/lofi.mp4" type="video/mp4" />
+          </video>
+        </span>
+        <!-- create a control center for users to control the website!! that way it's easy for them to take over the website when studying -->
+        <div class="control-container">
+          <!-- added a play and pause button for users to control the video -->
+          <div class="play-pause">
+            <button id="play-pause-btn" onclick="togglePlayPause()">
+              <img id="play-pause-img"
+              src=https://img.icons8.com/ios-glyphs/30/play--v2.svg alt="Play
+              Button" height="24" width="24"/>
+            </button>
+          </div>
+          <div class="mute-unmute">
+            <!-- added a mute Unmute button for users to mute the video whenever they want when studying -->
+            <button id="mute-unmute-img" onclick="toggleMuteUnmute()">
+              <img
+                id="mute-unmute-img"
+                src="https://img.icons8.com/ios-glyphs/30/high-volume--v2.svg"
+                width="24"
+                height="24"
+              />
+            </button>
+          </div>
+          <!-- added a title bit aswell, to make it look nice -->
+          <section class="title">
+            <h1>Now playing: lofi song woah</h1>
+          </section>
+        </div>
       </div>
       <div class="to-do-container">
+        <!-- added a to-do list for users to keep track of their task when studying, the website will store that data aswell when the user close the website or reload. it will be incredibly convinient for them whenever they comeback to the website -->
         <div class="to-do">
           <h2>To-Do List</h2>
           <div class="row">
@@ -95,4 +71,20 @@
       </div>
     </div>
   </body>
+  <footer>
+    <p>&copy; 2024 Media Player Website. All rights reserved.</p>
+    <a href="https://icons8.com/icon/59862/play">Play</a> icon by
+    <a href="https://icons8.com">Icons8</a>
+    <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
+    <a href="https://icons8.com">Icons8</a>
+    <a href="https://icons8.com/icon/reqgj3e1uKBy/audio">Mute</a> icon by
+    <a href="https://icons8.com">Icons8</a>
+    <a href="https://icons8.com/icon/91635/no-audio">UnMute</a> icon by
+    <a href="https://icons8.com">Icons8</a>
+    <a href="https://youtu.be/DbuebKNKQsQ?si=e_rliftLbCnf95bb">Video</a> video
+    by
+    <a href="https://www.youtube.com/c/TheJazzHopCaf%C3%A9"
+      >The Jazz Hop Café</a
+    >
+  </footer>
 </html>

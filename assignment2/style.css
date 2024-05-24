@@ -1,13 +1,11 @@
 :root {
-  --primary-bg-color: #f4f4f4;
-  --text-color: #333;
-  --main-bg-color: #333;
-  --main-text-color: #fff;
-  --main-btn-bg-color: #938989;
-  --grey: #ccccc2;
-  --lightblue: #769aa3;
+  --yellow: #f2eeac;
+  --orange: #ff8c38;
   --darkblue: #36484f;
-  --pink: #b78d95;
+  --pink: #e58e9e;
+  --peach: #f2a679;
+  --lightbrown: #8c4a3b;
+  --darkbrown: #260101;
 }
 
 body,
@@ -18,51 +16,46 @@ ul {
   padding: 0;
 }
 
+header {
+  background: #002765;
+}
+
 body {
-  font-family: "Arial", sans-serif;
   background: radial-gradient(
     circle,
     var(--pink),
-    var(--lightblue),
-    var(--grey)
+    var(--orange),
+    var(--yellow)
   );
-
-  color: var(--text-color);
   line-height: 1.6;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
   justify-content: start;
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
-
-/* Add additional styles as needed */
 
 /* Create a container for the main content */
-
-/* .container {
-  display: flex;
-  gap: 0.5rem;
-  padding: 10px;
-  background-color: #333;
-  justify-content: center;
-  break-inside: avoid;
-} */
-
-/*repeat notation: having the value repeated*/
-
 .container {
   display: flex;
-  flex-direction: row;
   width: 100%;
   margin-top: 10px;
+  justify-content: center;
 }
 
+/* CSS styling for the media player */
 .video-container {
-  width: 900px;
+  width: 700px;
   height: 0;
   padding-bottom: 56.26%; /*the aspect ratio of 16:9*/
   position: relative;
+  padding: 10px;
+}
+
+#video {
 }
 
 #video-element {
@@ -71,8 +64,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+
+  border: #edeef0 20px solid;
 }
 
+/* CSS styling for the to-do list */
 .to-do-container {
   width: 30%;
   padding-left: 15px;
@@ -80,7 +76,7 @@ body {
 }
 
 .to-do {
-  background-color: bisque;
+  border: #260101 4px solid;
   border-radius: 10px;
   flex: 1;
   padding: 10px;
@@ -93,7 +89,8 @@ body {
 }
 
 .to-do h2 {
-  color: #002765;
+  color: var(--darkbrown);
+  font-weight: 900;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -114,7 +111,7 @@ body {
   border: none;
   outline: none;
   background: transparent;
-  color: var(--text-color);
+  color: var(--darkbrown);
   padding: 10px;
 }
 
@@ -122,11 +119,32 @@ button {
   border: none;
   outline: none;
   padding: 16px 50px;
-  background: #ff5945;
+  background: var(--orange);
   color: #fff;
   font-size: 16px;
   cursor: pointer;
   border-radius: 40px;
+}
+
+.play-pause-name-container {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+#play-pause-btn {
+  background: var(--pink);
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  color: #769aa3;
+  background: #edeef0;
+  padding: 10px;
 }
 
 /* styling the checked box */
@@ -138,7 +156,7 @@ ul li {
   cursor: pointer;
   position: relative;
 }
-/* come back in the video for this one and dont forget to credit him */
+/* styling the unchecked */
 ul li::before {
   content: "";
   position: absolute;
@@ -235,56 +253,3 @@ nav a {
     margin-right: 0px;
   }
 }
-
-/* Media player styling */
-
-/* .video {
-  max-width: 900px;
-  max-height: 900px;
-  margin-bottom: 10px;
-}
-
-.custom-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 10px;
-  width: 100%;
-}
-
-.custom-controls button {
-  background-color: var(--main-btn-bg-color);
-  color: var(--main-text-color);
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-}
-
-.progress-bar {
-  width: 100%;
-  height: 10px;
-  background-color: #ddd;
-  margin-top: 10px;
-  overflow: hidden;
-}
-
-.progress-bar span {
-  display: block;
-  height: 100%;
-  background-color: var(--main-bg-color);
-  width: 0;
-  transition: width 0.3s ease;
-}
-
-/* Footer styling */
-/* footer {
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
-  text-align: center;
-  padding: 10px 0;
-  width: 100%;
-} */
