@@ -27,7 +27,7 @@
     <div class="container">
       <div class="video-container">
         <span id="video">
-          <video id="custom-video-player" controls autoplay>
+          <video id="custom-video-player" controls loop>
             <source src="video/lofi.mp4" type="video/mp4" />
           </video>
         </span>
@@ -37,21 +37,28 @@
           <div class="play-pause">
             <button id="play-pause-btn" onclick="togglePlayPause()">
               <img id="play-pause-img"
-              src=https://img.icons8.com/ios-glyphs/30/play--v2.svg alt="Play
+              src=https://img.icons8.com/ios-glyphs/30/play--v2.png alt="Play
               Button" height="24" width="24"/>
             </button>
           </div>
-          <div class="mute-unmute">
-            <!-- added a mute Unmute button for users to mute the video whenever they want when studying -->
-            <button id="mute-unmute-img" onclick="toggleMuteUnmute()">
+          <div class="play-pause">
+            <button id="play-pause-btn2" onclick="togglePlayPause2()">
+              <img id="play-pause-img2"
+              src=https://img.icons8.com/ios-glyphs/30/play--v2.png alt="Play
+              Button2" height="24" width="24"/>
+            </button>
+          </div>
+          <!-- <div class="mute-unmute">
+             added a mute Unmute button for users to mute the video whenever they want when studying -->
+          <!-- <button id="mute-unmute-btn" onclick="toggleMuteUnmute()">
               <img
                 id="mute-unmute-img"
-                src="https://img.icons8.com/ios-glyphs/30/high-volume--v2.svg"
+                src="https://img.icons8.com/ios-glyphs/30/pause--v2.png"
                 width="24"
                 height="24"
               />
-            </button>
-          </div>
+            </button> -->
+          <!-- </div> -->
           <!-- added a title bit aswell, to make it look nice -->
           <section class="title">
             <h1>Now playing: lofi song woah</h1>

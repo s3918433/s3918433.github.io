@@ -82,22 +82,32 @@ function togglePlayPause() {
   }
 }
 
+//script for pause and play button
+const playPauseBtn2 = document.querySelector("#play-pause-btn2");
+const playPauseImg2 = document.querySelector("#play-pause-img2");
+platPauseBtn.addEventListener("click", togglePlayPause2);
+
+function togglePlayPause2() {
+  if (video.paused || video.ended) {
+    video.play();
+    playPauseImg2.src = "https://img.icons8.com/ios-glyphs/30/pause--v2.png";
+  } else {
+    video.pause();
+    playPauseImg2.src = "https://img.icons8.com/ios-glyphs/30/play--v2.png";
+  }
+}
+
 //script for mute button
 const muteUnmuteButton = document.querySelector("#mute-unmute-btn");
-// const muteUnmuteImg = document.querySelector("#mute-unmute-img");
-// muteUnmuteButton.addEventListener("click", toggleMuteUnmute);
+const muteUnmuteImg = document.querySelector("#mute-unmute-img");
+muteUnmuteButton.addEventListener("click", toggleMuteUnmute);
 
 function toggleMuteUnmute() {
   if (video.muted) {
     video.muted = false;
-    muteUnmuteImg.src = "images/no-audio.png";
+    muteUnmuteImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v2.png";
   } else {
     video.muted = true;
-    muteUnmuteImg.src = "images/audio.png";
+    muteUnmuteImg.src = "https://img.icons8.com/ios-glyphs/30/play--v2.png";
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const muteUnmuteImg = document.querySelector("#mute-unmute-img");
-  muteUnmuteImg.addEventListener("click", toggleMuteUnmute());
-});
