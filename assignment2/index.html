@@ -26,29 +26,44 @@
     <!-- container for video and to-do-list -->
     <div class="container">
       <div class="video-container">
-        <span id="video">
-          <video id="custom-video-player" controls>
+        <div id="video">
+          <video id="custom-video-player" controls autoplay loop>
             <source src="video/lofi.mp4" type="video/mp4" />
           </video>
-        </span>
+        </div>
         <!-- create a control center for users to control the website!! that way it's easy for them to take over the website when studying -->
         <div class="control-container">
           <!-- added a play and pause button for users to control the video -->
-          <div class="play-pause">
+          <span class="play-pause">
             <button id="play-pause-btn" onclick="togglePlayPause()">
-              <img id="play-pause-img"
+              <img id="play-img"
               src=https://img.icons8.com/ios-glyphs/30/play--v2.png alt="Play
-              Button" height="24" width="24"/>
+              Button" height="24" width="24"/> <img id="pause-img"
+              src=https://img.icons8.com/ios-glyphs/30/pause--v2.png alt="Pause
+              Button" height="24" width="24" style = "display:none"/>
+              <!-- using "display:none" to have the icons appear when pressing the buttons. Because the page does not always reload, the icons may not usually showed-up so my friend's dad adviced me to use this code since it's more reliable, it will trigger the page to reload which updates the icons whenever users press the buttons-->
             </button>
-          </div>
-          <div class="mute-unmute">
+          </span>
+          <span class="mute-unmute">
+            <!-- added a mute Unmute button for users to mute the video whenever they want when studying -->
             <button id="mute-unmute-btn" onclick="toggleMuteUnmute()">
-              <img id="mute-unmute-img"
-              src=https://img.icons8.com/ios-glyphs/30/play--v2.png alt="Mute
-              Button" height="24" width="24"/>
+              <img
+                id="mute-img"
+                src="https://img.icons8.com/ios-glyphs/30/high-volume--v2.png"
+                alt="Mute Button"
+                width="24"
+                height="24"
+              />
+              <img
+                id="unmute-img"
+                src="https://img.icons8.com/ios-glyphs/30/no-audio--v1.png"
+                alt="Unmute Button"
+                width="24"
+                height="24"
+                style="display: none"
+              />
             </button>
-          </div>
-
+          </span>
           <!-- added a title bit aswell, to make it look nice -->
           <section class="title">
             <h1>Now playing: lofi song woah</h1>
@@ -67,21 +82,23 @@
         </div>
       </div>
     </div>
+    <!-- adding credits to the footer -->
+    <footer>
+      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
+      <a href="https://icons8.com/icon/59862/play">Play</a> icon by
+      <a href="https://icons8.com">Icons8</a>
+      <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
+      <a href="https://icons8.com">Icons8</a>
+      <a href="https://icons8.com/icon/reqgj3e1uKBy/audio">Mute</a> icon by
+      <a href="https://icons8.com">Icons8</a>
+      <a href="https://icons8.com/icon/91635/no-audio">UnMute</a> icon by
+      <a href="https://icons8.com">Icons8</a>
+      <a href="https://youtu.be/DbuebKNKQsQ?si=e_rliftLbCnf95bb">Video</a>
+      video by
+      <a href="https://www.youtube.com/c/TheJazzHopCaf%C3%A9"
+        >The Jazz Hop CafÃ©</a
+      >
+      <p>made by: Eugenia Calliste</p>
+    </footer>
   </body>
-  <footer>
-    <p>&copy; 2024 Media Player Website. All rights reserved.</p>
-    <a href="https://icons8.com/icon/59862/play">Play</a> icon by
-    <a href="https://icons8.com">Icons8</a>
-    <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
-    <a href="https://icons8.com">Icons8</a>
-    <a href="https://icons8.com/icon/reqgj3e1uKBy/audio">Mute</a> icon by
-    <a href="https://icons8.com">Icons8</a>
-    <a href="https://icons8.com/icon/91635/no-audio">UnMute</a> icon by
-    <a href="https://icons8.com">Icons8</a>
-    <a href="https://youtu.be/DbuebKNKQsQ?si=e_rliftLbCnf95bb">Video</a> video
-    by
-    <a href="https://www.youtube.com/c/TheJazzHopCaf%C3%A9"
-      >The Jazz Hop Café</a
-    >
-  </footer>
 </html>

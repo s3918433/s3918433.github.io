@@ -1,4 +1,4 @@
-//script for current time in the header
+// Script for current time in the header
 // Credits goes to SheCodes; AI coding assistant: https://www.shecodes.io/athena#question-428657
 //--------------------------------------------------------
 function updateTime() {
@@ -14,11 +14,8 @@ updateTime();
 //website updates every 1000 millisecond
 setInterval(updateTime, 1000);
 
-//script for a working video
-const video = document.querySelector("#custom-video-player");
-
-//script for Todo List
-//Credits goes to: https://youtu.be/G0jO8kUrg-I?si=OIs44rVNl0v3g89h
+// Script for Todo List
+// Credits goes to: https://youtu.be/G0jO8kUrg-I?si=OIs44rVNl0v3g89h
 //--------------------------------------------------------
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
@@ -67,33 +64,32 @@ function showTask() {
 }
 showTask();
 
-//script for pause and play button
-const playPauseBtn = document.querySelector("#play-pause-btn");
-const playPauseImg = document.querySelector("#play-pause-img");
-playPauseBtn.addEventListener("click", togglePlayPause());
+// Script for a working video
+//--------------------------------------------------------
+const video = document.querySelector("#custom-video-player");
 
+//script for pause and play button
 function togglePlayPause() {
   if (video.paused || video.ended) {
     video.play();
-    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v2.png";
+    document.getElementById("play-img").style.display = "none";
+    document.getElementById("pause-img").style.display = "block";
   } else {
     video.pause();
-    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/play--v2.png";
+    document.getElementById("play-img").style.display = "block";
+    document.getElementById("pause-img").style.display = "none";
   }
 }
 
-//script for pause and play button
-const muteUnmuteBtn = document.querySelector("#mute-unmute-btn");
-const muteUnmuteImg = document.querySelector("#mute-unmute-img");
-muteUnmuteBtn.addEventListener("click", toggleMuteUnmute());
-
+//script for mute button
 function toggleMuteUnmute() {
   if (video.muted) {
-    video.muted = true;
-    muteUnmuteImg.src = "https://img.icons8.com/ios-glyphs/30/no-audio--v1.png";
-  } else {
     video.muted = false;
-    muteUnmuteImg.src =
-      "https://img.icons8.com/ios-glyphs/30/high-volume--v2.png";
+    document.getElementById("mute-img").style.display = "block";
+    document.getElementById("unmute-img").style.display = "none";
+  } else {
+    video.muted = true;
+    document.getElementById("mute-img").style.display = "none";
+    document.getElementById("unmute-img").style.display = "block";
   }
 }

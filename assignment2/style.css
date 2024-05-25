@@ -1,3 +1,5 @@
+/* Decided to put my colour scheme the same as the video, to make it look aesthetically pleasing to view at. */
+
 :root {
   --yellow: #f2eeac;
   --orange: #ff8c38;
@@ -8,6 +10,15 @@
   --darkbrown: #260101;
 }
 
+/* Header styling */
+header {
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  color: #edeef0;
+}
+
+/* text styling */
 body,
 h1,
 p,
@@ -16,14 +27,7 @@ ul {
   padding: 0;
 }
 
-header {
-  background: #002765;
-}
-
-footer {
-  text-align: center;
-}
-
+/* body styling */
 body {
   background: radial-gradient(
     circle,
@@ -43,7 +47,7 @@ body {
   min-width: 350px;
 }
 
-/* Create a container for the main content */
+/* create a container for the main content */
 .container {
   display: flex;
   width: 100%;
@@ -51,15 +55,12 @@ body {
   justify-content: center;
 }
 
-/* CSS styling for the media player */
+/* CSS styling for the lofi video*/
 .video-container {
   width: 700px;
   position: relative;
   padding: 10px;
   padding-top: 0px;
-}
-
-#video {
 }
 
 #video-element {
@@ -68,8 +69,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-
-  border: #edeef0 20px solid;
 }
 
 /* CSS styling for the to-do list */
@@ -80,7 +79,7 @@ body {
 }
 
 .to-do {
-  border: #260101 4px solid;
+  border: #260101 2px solid;
   border-radius: 10px;
   flex: 1;
   padding: 10px;
@@ -120,6 +119,7 @@ body {
   width: 80%;
 }
 
+/* styling for the control pannel */
 .control-container {
   padding-top: 5px;
 }
@@ -143,7 +143,7 @@ button {
 
 #play-pause-btn {
   background: var(--pink);
-  border: solid 2px rgb(243, 199, 7);;
+  border: solid 2px rgb(243, 199, 7);
   cursor: pointer;
   outline: none;
 }
@@ -159,6 +159,7 @@ button {
 
 /* styling the checked box */
 ul li {
+  color: #edeef0;
   list-style: none;
   font-size: 17px;
   padding: 12px 8px 12px 50px;
@@ -207,39 +208,10 @@ ul li span {
 /* styling for the delete icon when the mouse hover it */
 ul li span:hover {
   background: #edeef0;
+  border-radius: 15px;
 }
 
-/* Header styling */
-header {
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
-  padding: 10px 0;
-  text-align: center;
-  width: 100%;
-}
-
-/* Navigation styling */
-nav {
-  margin-top: 20px;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin-right: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-/* Media query for smaller screens */
+/* For some reason when the website was shrunk the layout was not what i wanted so i asked ChatGpt to help me and they gave me this code */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -261,4 +233,16 @@ nav a {
     margin-left: 0px;
     margin-right: 0px;
   }
+}
+
+/* styling for footer */
+footer {
+  padding-top: 180px;
+  text-align: center;
+  color: #edeef0;
+}
+
+footer p {
+  gap: 2rem;
+  padding-left: 159px;
 }
