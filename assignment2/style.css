@@ -53,10 +53,9 @@ body {
 /* CSS styling for the media player */
 .video-container {
   width: 700px;
-  height: 0;
-  padding-bottom: 56.26%; /*the aspect ratio of 16:9*/
   position: relative;
   padding: 10px;
+  padding-top: 0px;
 }
 
 
@@ -206,14 +205,14 @@ ul li span:hover {
 
 /* Media query for smaller screens */
 /* the styling format when the screen is shrunk! */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
 
   .video-container {
     width: 100%;
-    padding-bottom: 56.25%;
+    
   }
 
   .to-do-container {
@@ -221,14 +220,14 @@ ul li span:hover {
     margin-top: 10px;
     padding-left: 2px;
     padding-right: 2px;
-  }
+  } */
 
-  .to-do {
+  /* .to-do {
     /* height: 150px; */
     margin-left: 0px;
     margin-right: 0px;
   }
-}
+} */
 
 /* Footer styling */
 footer {
