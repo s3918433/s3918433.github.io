@@ -1,3 +1,17 @@
+<!-- In this assignment, i decided to picked a prompt of portfolio. Since it is a
+portfolio i am flexible to create what i want and how i would want my website to
+achieve; i wanted it to represent me. I was greatly inspired by my Ipad's
+wallpaper where apple just released their new astronology wallpaper and theres a
+planet Mars which in the ipad looked pink. I feel inlove with the wallpaper
+immediately and wanted to use the colour pallete and aesthetic. I wanted users
+to have a easy navigation and have fun when interacting my website. So i made
+the layout as simple and straightforward as possible so text-savy and non-text
+savy users could understand what is going on and knows how to operate! -->
+
+<!-- I ended up doing hover: change colour, hover: scaling, clicking: stars and the
+slide show. All inspired by 2 interactive portfolio webpage:
+https://www.guts.agency/ and https://kkapustin.com/ -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,12 +45,28 @@
         <p>Assignment 3</p>
       </nav>
     </div>
-
+    <!-- the 'interactive planet section' -->
     <div class="planet">
       <div class="container">
+        this is a 3d model i created in blender and animate it myself, this is
+        to recreate my wallpaper look; i animate it aswell as the planet spins
+        and the light; to give more of a nice effect, like theres something. I
+        was inspired by Kapustin's webiste where the keyboard was there, when i
+        was going through his webpage; i looked at it in a ipad where whenever i
+        press the screen the crosshair pointer changed based on where i pressed.
+        hence why i made the stars effect where whenever users enters my page,
+        they can add stars around the planet. It fits the aesthetic as it is a
+        planet and added stars in it and also it's interactive for users to play
+        with
         <video autoplay muted loop id="backgroundVideo">
           <source src="video/mars.mp4" type="video/mp4" />
         </video>
+        <!-- i had trouble making the text going on top of the video since the text
+        was behind it, i asked ChatGPT to help me and they told me to create a
+        seperate div and name it overlay. I did not want to say it like 'click
+        me to get stars' or a sentence that state what users should do, i wanted
+        to word it out super metaphorically but not hard enough that people do
+        not understand what to do -->
         <div class="overlay">
           <p>stars only appear if interacted</p>
         </div>

@@ -80,7 +80,7 @@ nav {
   height: 5px;
   background-color: var(--white);
   border-radius: 60%;
-  box-shadow: 0 0 10px;
+  box-shadow: 0 0 10px; /*making it glow to look like an actual star!*/
   opacity: 1;
   transition: opacity 2s;
 }
@@ -124,11 +124,10 @@ nav {
 
 /* styling for carousell slide show */
 .slideContainer {
-  max-width: 1100px;
+  max-width: 1200px;
   justify-content: center;
   position: absolute;
-
-  top: 58%;
+  top: 50%;
   left: 48.5%;
   justify-content: center;
   transform: translate(-50%, -50%);
@@ -158,10 +157,29 @@ nav {
   justify-content: center;
   text-align: center;
   background-color: var(--brown);
+  padding: 40px;
 }
 
+/* random colours placed in all of the cards, took these from my A1 :) */
 .card:nth-child(3n) {
-  /* every third child is aspect ratio 1 (square) */
+  background-color: var(--pink);
+}
 
-  background-color: var(--pink); /* colour pallete from the website*/
+.card:nth-child(3n - 1) {
+  background-color: var(--dark-pink);
+}
+
+/* styling for footer */
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1000px;
+}
+
+footer p {
+  text-align: center;
 }
