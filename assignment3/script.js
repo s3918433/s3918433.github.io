@@ -24,29 +24,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 2000);
   });
 });
-
-let slideIndex = 0;
-const slides = document.getElementsByClassName("slide");
-const slideWidth = slides[0].clientWidth + 20; // Get width of each slide + margin
-
-function showSlides() {
-  const slideOffset = -slideIndex * slideWidth;
-  const containerWidth = document.querySelector(
-    ".slideshow-container"
-  ).offsetWidth;
-  const slidesVisible = Math.floor(containerWidth / slideWidth);
-  const centerOffset = (containerWidth - slideWidth) / 2;
-
-  // Adjust slideOffset to center the selected slide
-  slideOffset += centerOffset - (slideWidth / 2) * (slidesVisible - 1);
-
-  // Move slides container horizontally
-  document.querySelector(
-    ".slides"
-  ).style.transform = `translateX(${slideOffset}px)`;
-}
-
-function changeSlide(n) {
-  slideIndex += n;
-  showSlides();
-}
