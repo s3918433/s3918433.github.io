@@ -1,0 +1,58 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: blue;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.header {
+  background-color: var(--pink);
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Ensure header stays above stars */
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 5px 0;
+}
+
+/* Container for interactive area */
+#container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust as needed */
+  cursor: pointer;
+
+  z-index: 0; /* Behind header */
+}
+
+/* Style for the star effect */
+.star {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white; /* White color */
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--white); /* Optional: glowing effect */
+}

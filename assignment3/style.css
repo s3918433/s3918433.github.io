@@ -1,0 +1,64 @@
+/* styles for everything */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--white);
+  background-color: var(--black);
+  overflow: hidden; /* preventing scrollbars */
+}
+
+/* my colour palette; i was inspired by the new apple astronomy wallpaper, they have a wallpaper that showcase one of the planets. I chose the mars wallpaper cause in the wallpaper it looks pink and i thought that would match the aesthetic. */
+:root {
+  --black: #0d0d0d;
+  --pink: #f29991;
+  --dark-pink: #a6565d;
+  --brown: #d28a59;
+  --white: #f2f2f2;
+}
+
+/* styling for heading */
+.header {
+  height: 100vh;
+  width: 100%;
+  padding: 0 8%;
+  position: relative;
+  z-index: 1; /* ensure the header stays above the stars */
+}
+
+body {
+  height: 100%;
+  border: 2px solid red;
+}
+
+/* styling the navigation links */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  padding: 28px 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--pink);
+  padding: 5px 0;
+}
+
+/* styling the interactive stars*/
+
+.container {
+  background-color: #a6565d;
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
